@@ -43,7 +43,7 @@ export const api = {
   // System
   getHealth: () => request<SystemHealth>('/system/health'),
   getConfigStatus: () => request<SystemConfigStatus>('/system/config/status'),
-  seedDemoData: () => request<{ status: string; repository_id: number; scan_id: number }>('/system/seed-demo', { method: 'POST' }),
+  seedDemoData: () => request<{ status: string; message?: string; stats?: any; summary?: any }>('/system/seed-demo', { method: 'POST' }),
 
   // Dashboard
   getMetrics: () => request<DashboardMetrics>('/dashboard/metrics'),

@@ -5,6 +5,7 @@ from backend.app.core.database import Base
 
 class TestRun(Base):
     __tablename__ = "test_runs"
+    __test__ = False
 
     id = Column(Integer, primary_key=True, index=True)
     repair_attempt_id = Column(Integer, ForeignKey("repair_attempts.id", ondelete="CASCADE"), nullable=False)
